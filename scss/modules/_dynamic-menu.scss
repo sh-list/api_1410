@@ -1,0 +1,142 @@
+.dynamic--menu--small {
+  //background-color: salmon;
+  
+  li {
+    background-color: rgba($primary-color, 0.4);
+    border-bottom: 0;
+    //line-height: 1.8em;
+     
+    a {
+      padding: 8px 30px;
+      font-size: 14px;
+      opacity: 0.6;
+      
+      &:hover {
+        background-color: transparent;
+        opacity: 1;
+      }
+    }    
+  }
+  
+  li:first-child {
+    //background-color: firebrick;
+    padding-top: 8px;
+  }
+  
+  li:last-child {
+    padding-bottom: 8px;
+  }   
+}
+
+.dynamic--menu--small > a {
+  position: relative;
+}
+
+.dynamic--menu--small > a:after {
+  content: '+';
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+}
+
+.dynamic--menu--small.expand {
+  //background-color: rosybrown;
+  
+  .menu--accordion {
+    max-height: 400px;
+  }  
+}
+
+.dynamic--menu--small.expand > a:after {
+  content: '-';
+}
+
+.menu--accordion {
+  //background-color: palegoldenrod;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .6s ease-in-out;
+}
+
+
+
+
+//Media queries - Mobile Layout: 320px
+@media only screen and (max-width: 767px) {
+  .dynamic--menu--small > a:after {
+    right: 15px;
+  }
+}
+
+
+
+
+//Media queries - Desktop Layout: 1220px
+@media only screen and (min-width: 1220px) {
+  .dynamic--menu {
+    //background-color: salmon;
+    
+    li {
+      //background-color: rgba($primary-color, 0.4);
+      //background-color: pink;
+      border-bottom: 0 !important;
+      //line-height: 1.8em;
+       
+      a {
+        padding: 8px 30px;
+        font-size: 14px;
+        opacity: 0.6;
+        
+        &:hover {
+          background-color: transparent;
+          opacity: 1;
+        }
+      }    
+    }
+    
+    li:first-child {
+      //background-color: firebrick;
+      padding-top: 8px;
+    }
+    
+    li:last-child {
+      padding-bottom: 8px;
+    }    
+  }
+  
+  .dynamic--menu > a {
+    position: relative;
+  }
+  
+  .dynamic--menu > a:after {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+  }
+  
+  .dynamic--menu.expand {
+    //background-color: rosybrown;
+    
+    .menu--accordion {
+      max-height: 400px;
+      
+      li {
+        //border-bottom: 0;
+      }
+    }  
+  }
+  
+  .dynamic--menu.expand > a:after {
+    content: '-';
+  }
+  
+  .menu--accordion {
+    //background-color: palegoldenrod;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .6s ease-in-out;    
+  }
+}

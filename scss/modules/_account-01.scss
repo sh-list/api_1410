@@ -1,0 +1,81 @@
+.api__account__wrapper {
+  margin-top: 40px;
+  
+  .bar--indicator {
+    //background-color: lightsalmon;
+    width: 100%;
+    
+    .bar {
+      background-color: mistyrose;
+      position: relative;
+      height: 30px;
+      margin-bottom: 50px;
+      //box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;
+      box-shadow: 0 1px 0px tomato inset, 0 1px 0 firebrick;
+      
+      .key__usage {
+        background-color: rosybrown;
+        color: whitesmoke;
+        position: absolute;
+        top: 0;
+        height: 30px;
+        margin: 1px 0;
+        padding: 0 20px;
+        //transform: translateY(-50%);
+      }
+      
+      .key1 {
+        width: 100%;
+        animation: key1 6s ease-out;
+      }
+      
+      @keyframes key1 {
+        0% {
+          width: 0;
+        }
+        
+        100% {
+          width: 100%;
+        }
+      }
+      
+      .key1:before {
+        background-color: tomato;
+        content: 'blah';
+        float: right;
+        animation: test-pseudo 6s ease-out;
+      }
+      
+      @keyframes test-pseudo {
+        0% {
+          background-color: goldenrod;
+          visibility: hidden;
+        }
+        
+        95% {
+          visibility: hidden;
+        }
+        
+        100% {
+          background-color: plum;
+          visibility: visible;
+        }
+      }
+      
+      .key2 {
+        width: 60%;
+        animation: key2 6s ease-out;
+      }
+      
+      @keyframes key2 {
+        0% {
+          width: 0;
+        }
+        
+        100% {
+          width: 60%;
+        }
+      }
+    }
+  }
+}

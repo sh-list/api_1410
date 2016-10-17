@@ -1,0 +1,182 @@
+@mixin button-standard() {
+  background-color: transparent;
+  color: whitesmoke;
+  padding: 6px 10px;
+  margin: 20px 0;
+  font-family: 'montserratlight', 'helvetica', sans-serif;
+  font-size: 1em;
+  //letter-spacing: 0.02em;
+  border: 1px solid whitesmoke;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all .4s;
+  
+  &:hover {
+    color: $highlight-color;
+    border-color: $highlight-color;
+  }  
+}
+
+
+@mixin button-standard-small(){
+  @include button-standard;
+  padding: 5px 8px;
+  font-size: 0.85em;
+}
+
+
+@mixin button-action() {
+  background-color: transparent;
+  color: $primary-color;
+  padding: 6px 14px;
+  margin: 20px 0;
+  font-family: 'montserratlight', 'helvetica', sans-serif;
+  font-size: 1em;
+  //letter-spacing: 0.02em;
+  border: 1px solid $primary-color;
+  cursor: pointer;
+  
+  &:hover {
+    color: $highlight-color;
+    border-color: $highlight-color;
+  }
+}
+
+
+@mixin button-action-small() {
+  @include button-action();
+  padding: 5px 12px;
+  font-size: 0.85em;
+}
+
+
+.button--container {
+  
+  .login__button {
+    @include button-standard();
+  }
+}
+
+
+.get__key__button {
+  @include button-action();
+  
+  span {
+    position: relative;
+    right: 0;
+    transition: right .4s;
+  }
+  
+  span:after {
+    content: '»';
+    position: absolute;
+    right: 0px;
+    opacity: 0;
+    transition: right .4s;
+    
+  }
+  
+  &:hover span {
+    right: 6px;
+  }
+  
+  &:hover span:after {
+    opacity: 1;
+    transform: translateX(12px);
+  }  
+}
+
+
+.get__docs__button {
+  @include button-action();
+}
+
+
+.upgrade__button {
+  @include button-standard();
+  background-color: saturate(cadetblue, 30%);
+  color: whitesmoke;
+  width: 205px;
+  font-family: 'montserratregular', 'helvetica', sans-serif;
+  text-shadow: 1px 1px 1px lightslategray;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-color: saturate(cadetblue, 30%);
+  
+  &:hover {
+    background-color: $highlight-color;
+    color: whitesmoke;
+    border-color: $highlight-color;
+  }
+}
+
+
+.copy__button {
+  @include button-standard();
+  background-color: $highlight-color;
+  color: whitesmoke;
+  position: absolute;
+  top: 0;
+  right: 100px;
+  width: 100px;
+  //height: 32px;
+  border-color: $highlight-color;
+  
+  &:hover {
+    background-color: darken($highlight-color, 15%);
+    color: whitesmoke;
+    border-color: darken($highlight-color, 15%);
+  }  
+}
+
+
+.revoke__button {
+  @include button-standard();
+  background-color: indianred;
+  color: whitesmoke;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  //height: 32px;
+  //margin-left: 5px;
+  border-color: indianred;
+  
+  &:hover {
+    background-color: firebrick;
+    color: whitesmoke;
+    border-color: firebrick;
+  }
+}
+
+
+
+
+//Media queries - Mobile Layout: 320px
+@media only screen and (max-width: 767px) {
+  .button--container {
+    
+    .login__button {
+      @include button-standard-small();
+    }
+  }
+  
+  .get__key__button {
+    @include button-action-small();
+  }
+  
+  .get__docs__button {
+    @include button-action-small();
+  }
+  
+  .copy__button {
+    right: 65px;
+    width: 65px;
+    font-size: 0.8em;
+  }
+  
+  .revoke__button {
+    width: 65px;
+    font-size: 0.8em;
+  }  
+}

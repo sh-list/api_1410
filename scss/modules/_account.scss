@@ -1,0 +1,188 @@
+.api__account__wrapper {
+  //background: seashell;
+  margin-top: 40px;
+  //padding-top: 30px;
+  //border-top: 1px solid silver;
+  
+  .api__keys__wrapper {
+    //width: 50%;
+    padding-top: 30px;
+    border-top: 1px solid silver;
+    
+    .api__saved__key {
+      //@include span(9 at 7 of 18);
+      //width: 50%;
+      margin-bottom: 30px;
+      
+      h3 {
+        //color: rgba($primary-color, 0.6);
+        margin-bottom: 5px;
+        font-family: 'montserratregular', sans-serif;
+      }
+      
+      .key--usage::before {
+        content: '600 / 1,000';
+        right: 40.5%;
+      }
+      
+      .key--usage--1::before {
+        content: '200 / 1,000';
+        right: 80.5%;
+      }
+      
+      .creation--date {
+        color: rgba($primary-color, 0.6);
+        display: block;
+        margin-top: 5px;
+        font-size: 14px;
+      }
+      
+      .api__key__input__wrapper {
+        //background-color: plum;
+        position: relative;
+        
+        .api__key__input {
+          background-color: rgba($highlight-color, 0.2);
+          color: lightslategray; // styling for placeholder text
+          opacity: 0.6; // styling for placeholder text
+          width: calc(100% - 220px);
+          height: 35px;
+          padding-left: 10px;
+          margin-top: 20px;
+          outline: 0;
+          border: 0;
+          box-shadow: none;
+          font-size: 14px;
+        }
+        
+        ::placeholder {
+          //color: tomato;
+          //opacity: 0.3;
+        }
+        
+        ::-webkit-input-placeholder {
+          //color: tomato;
+          //padding-left: 10px;
+        }
+        
+        ::-moz-placeholder {
+          //color: tomato;
+          //padding-left: 10px;
+        }        
+      }      
+    }    
+  }
+  
+  .api__call__limit, .api__saved__key {
+    //background: coral;
+    margin-bottom: 60px;
+    
+    h2 {
+      //background: lemonchiffon;
+      color: $highlight-color;
+      position: relative;
+      margin: 40px 0 25px 0;
+      padding-left: 30px;
+      font-family: 'montserratregular' sans-serif;
+      //font-size: 1.3em;
+      //text-transform: uppercase;
+      //letter-spacing: 0.1em;
+      //border-left: 30px solid rgba($highlight-color, 0.4);
+    }
+    
+    h2:before {
+      background: rgba($highlight-color, 0.4);
+      content: ' ';
+      position: absolute;
+      top: 16%;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      //border-radius: 50%;
+    }
+    
+    .progress--usage {
+      background-color: rgba($primary-color, 0.2);
+      position: relative;
+      width: 100%;
+      height: 30px;
+      margin-top: 5px;
+      outline: 0;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;      
+    }
+    
+    .progress--usage::before {
+      color: whitesmoke;
+      content: '400 / 1,000';
+      position: absolute;
+      right: 60.5%;
+      bottom: 5px;
+      font-family: 'montserratregular', sans-serif;
+    }
+    
+    .progress--usage::-moz-progress-bar {
+      background-color: rgba($primary-color, 0.3);
+    } // for styling the value bar in Firefox
+    
+    .progress--usage::-webkit-progress-bar {
+      background-color: rgba($primary-color, 0.05);
+    }  // for styling the background of entire bar in Chrome
+    
+    .progress--usage::-webkit-progress-value {
+      background-color: rgba($primary-color, 0.3);
+    }  // for styling the value bar in Chrome
+  } 
+}
+
+
+
+
+//Media queries - Mobile Layout: 320px
+@media only screen and (max-width: 767px) {
+  .api__account__wrapper {
+    margin-top: 0;
+    
+    .api__keys__wrapper {
+      
+      .api__saved__key {
+        
+        h3 {
+          //color: lime;
+          font-size: 16px;
+        }
+        
+        .creation--date {
+          font-size: 11px;
+        }
+        
+        .api__key__input__wrapper {
+          
+          .api__key__input {
+            width: calc(100% - 140px);
+            height: 32px;
+          }
+        }
+      }
+    }
+    
+    .api__call__limit, .api__saved__key {
+      margin-bottom: 20px;
+      
+      h2 {
+        @include h2-style-small();
+        margin: 20px 0 10px 0;
+        padding-left: 22px;
+      }
+      
+      h2:before {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}

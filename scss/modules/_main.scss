@@ -1,0 +1,106 @@
+html {
+  //font-size: responsive 12px 18px;
+  //font-range: 320px 1220px;
+}
+
+body {
+  background-color: aliceblue;
+  color: darkslategray;
+  font-family: 'montserratlight', 'helvetica', sans-serif;
+}
+
+h1 {
+  @include h1-style();
+}
+
+h2 {
+  @include h2-style();
+}
+
+h3 {
+  @include h3-style-docs();
+}
+
+p {
+  margin: 8px 0 20px 0;
+  font-size: responsive 13px 15px;
+  line-height: 1.6em;
+}
+
+
+
+
+.site--container {
+  @include container(100%);
+  //background-color: peachpuff;
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  
+  .main--wrapper {
+    //@include span(18 of 24);
+    //@include last;
+    //background-color: lavender;
+    position: relative;
+    float: right;
+    width: 75.75%;
+    height: 100%;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    
+    .content--wrapper {
+      //background-color: palegoldenrod;
+      height: 100%;
+      //padding: 30px 4.1667% 0 4.1667%;
+      padding: 30px 30px 0 30px;
+    }
+  }  
+}
+
+
+
+
+//Media queries - Tablet Layout: 768px
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  @include layout($medium-screen);
+  
+  .site--container {
+    @include container();
+    
+    .main--wrapper {
+      //@include span(20 at 5 of 24);
+      width: 100%;
+    }
+  }
+}
+
+
+
+
+//Media queries - Mobile Layout: 320px
+@media only screen and (max-width: 767px) {
+  @include layout($small-screen);
+  
+  html {
+     -webkit-text-size-adjust: none;
+  }
+  
+  h2 {
+    @include h2-style-small();
+  }
+   
+  .site--container {
+    @include container();
+    
+    .main--wrapper {
+      //@include span(16 at 9 of 24);
+      width: 100%;
+      
+      .content--wrapper {
+        padding: 30px 15px 0 15px;
+      }
+    }
+  }
+}

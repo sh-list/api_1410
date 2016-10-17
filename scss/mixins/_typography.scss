@@ -1,0 +1,43 @@
+@mixin h1-style() {
+  //color: $highlight-color;
+  //margin-bottom: 20px;
+  font-family: 'montserratregular', 'helvetica', sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+
+@mixin h1-style-small() {
+  @include h1-style();
+  font-size: 20px;
+}
+
+
+@mixin h2-style() {
+  @include h1-style();
+  font-size: 22px;
+}
+
+
+@mixin h2-style-small() {
+  @include h2-style();
+  font-size: 18px;
+}
+
+
+@mixin h3-style-docs() {
+  background-color: lighten($primary-color, 15%);
+  color: whitesmoke;
+  display: inline;
+  margin: 0;
+  padding: 2px 8px;
+  font-family: 'montserratregular', 'helvetica', sans-serif;
+  font-size: 14px !important;
+  font-weight: normal;
+  text-transform: capitalize !important;
+  letter-spacing: 0.06em !important;
+  border-radius: 3px;
+}
+

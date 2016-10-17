@@ -1,0 +1,115 @@
+/* --------------------------------------------------------------
+   Susy Defaults
+-------------------------------------------------------------- */
+$susy: (
+  columns: 24,
+  //gutter-position: split,
+  debug: (
+    image: show,
+    output: overlay
+  ),
+);
+
+
+$small-screen: (
+  columns: 6,
+  debug: (image: show, output: overlay)
+);
+
+
+$medium-screen: (
+  columns: 12,
+  debug: (image: show, output: overlay)
+);
+
+
+
+
+/* --------------------------------------------------------------
+   Reset Defaults
+-------------------------------------------------------------- */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+
+a, li, button {
+  text-decoration: none;
+  list-style: none;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  
+  &:hover {
+    transition: color .4s;
+  }
+}
+
+*:hover {
+  transition: .4s;
+}
+
+
+
+
+/* --------------------------------------------------------------
+   Colours
+-------------------------------------------------------------- */
+$primary-color: #19475f;
+$highlight-color: #66cdaa;
+
+
+
+
+/* --------------------------------------------------------------
+   Fonts
+-------------------------------------------------------------- */
+@font-face {
+  font-family: 'listicons';
+  src:  url('../fonts/listicons.eot?uiz41u');
+  src:  url('../fonts/listicons.eot?uiz41u#iefix') format('embedded-opentype'),
+    url('../fonts/listicons.ttf?uiz41u') format('truetype'),
+    url('../fonts/listicons.woff?uiz41u') format('woff'),
+    url('./fonts/listicons.woff2?uiz41u') format('woff2'),
+    url('../fonts/listicons.svg?uiz41u#listicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserratregular';
+    src: url('../fonts/montserrat-regular-webfont.eot');
+    src: url('../fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat-regular-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-regular-webfont.woff') format('woff'),
+         url('../fonts/montserrat-regular-webfont.ttf') format('truetype'),
+         url('../fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserratlight';
+    src: url('montserrat-light-webfont.eot');
+    src: url('../fonts/montserrat-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat-light-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-light-webfont.woff') format('woff'),
+         url('../fonts/montserrat-light-webfont.ttf') format('truetype'),
+         url('../fonts/montserrat-light-webfont.svg#montserratlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

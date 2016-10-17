@@ -1,0 +1,138 @@
+.api__search__form {
+  @include span(18 nest);
+  //background-color: plum;
+  width: 100%;
+  //height: 400px;
+  margin-top: 30px;
+  
+  .input__container {
+    @include span(100%);
+    //background-color: beige;
+    position: relative;
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    
+    input {
+      background-color: transparent;
+      color: darkslategray;
+      width: 100%;
+      height: 40px;
+      font-family: 'montserratlight' sans-serif;
+      font-size: 1.2em;
+      border: 0;
+      outline: 0;
+      box-shadow: none;
+      
+      &:focus {
+        color: $highlight-color;
+      }
+    }
+    
+    label {
+      color: silver;
+      position: absolute;
+      top: 0;
+      left: 0;
+      line-height: 40px;
+      transition: all 0.3s ease 0.1s;
+    }
+    
+    input:focus ~ label {
+      color: darkslategray;
+      transform: translate(-10%, -70%) scale(0.80);
+    }
+    
+    input:valid ~ label {
+      transform: translate(-10%, -70%) scale(0.80);
+    }
+    
+    .input__underline {
+      background: silver;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+    }
+    
+    .input__underline:before {
+      background: $highlight-color;
+      content: ' ';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      transition: all 0.3s ease 0.1s;
+    }
+    
+    input:focus ~ .input__underline:before {
+      width: 100%;
+    }
+  }
+  
+  .mod__date {
+    @include span(31.3333%);
+    @include gutters(3%);
+    //background: tomato;
+  }
+  
+  .min__date {
+    @include span(31.3333%);
+    @include gutters(3%);
+    //background: coral;
+  }
+  
+  .max__date {
+    @include span(31.3333% omega);
+    //background: thistle;
+  } 
+}
+
+.api__explore__key__wrapper {
+  //background-color: plum;
+  position: relative;
+  margin-bottom: 25px;
+  
+  .api__key__input {
+    background-color: rgba($highlight-color, 0.2);
+    color: lightslategray; // styling for placeholder text
+    opacity: 0.6; // styling for placeholder text
+    width: 100%;
+    height: 35px;
+    padding-left: 10px;
+    //margin-top: 20px;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    font-size: 14px;
+  }
+  
+  ::placeholder {
+    //color: tomato;
+    //opacity: 0.3;
+  }
+  
+  ::-webkit-input-placeholder {
+    //color: tomato;
+    //padding-left: 10px;
+  }
+  
+  ::-moz-placeholder {
+    //color: tomato;
+    //padding-left: 10px;
+  }  
+}      
+
+
+
+
+
+//Media queries - Mobile Layout: 320px
+@media only screen and (max-width: 767px) {
+  .api__search__form {
+    
+    .input__container {
+      font-size: 0.8em;
+    }
+  }
+}
