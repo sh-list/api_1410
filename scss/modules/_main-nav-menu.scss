@@ -1,6 +1,6 @@
 .main--menu {
   //@include span(6 of 24);
-  //background-color: $primary-color;
+  //background-color: peachpuff;
   background-color: lighten($primary-color, 5%);
   position: fixed;
   top: 0;
@@ -148,3 +148,4 @@
     display: block;
   }    
 }
+
