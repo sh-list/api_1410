@@ -27,6 +27,16 @@
 }
 
 
+@mixin h2-style-docs() {
+  //background-color: silver;
+  color: lighten($primary-color, 15%);
+  padding: 4px 0 8px 0;
+  font-size: responsive 16px 18px;
+  text-transform: capitalize;
+  letter-spacing: 0.06em;
+}
+
+
 @mixin h3-style-docs() {
   background-color: lighten($primary-color, 15%);
   color: whitesmoke;
@@ -34,10 +44,10 @@
   margin: 0;
   padding: 2px 8px;
   font-family: 'montserratregular', 'helvetica', sans-serif;
-  font-size: 14px !important;
+  font-size: responsive 13px 14px;
   font-weight: normal;
-  text-transform: capitalize !important;
-  letter-spacing: 0.06em !important;
+  text-transform: capitalize;
+  letter-spacing: 0.06em;
   border-radius: 3px;
 }
 

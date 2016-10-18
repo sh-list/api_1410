@@ -22,7 +22,7 @@ h3 {
 }
 
 p {
-  margin: 8px 0 20px 0;
+  margin: 6px 0 18px 0;
   font-size: responsive 13px 15px;
   line-height: 1.6em;
 }
@@ -52,9 +52,12 @@ p {
     
     .content--wrapper {
       //background-color: palegoldenrod;
+      position: fixed;
+      top: 150px;
+      width: 75.75%;
       height: 100%;
-      //padding: 30px 4.1667% 0 4.1667%;
       padding: 30px 30px 0 30px;
+      overflow: scroll;
     }
   }  
 }
@@ -71,7 +74,12 @@ p {
     
     .main--wrapper {
       //@include span(20 at 5 of 24);
+      position: fixed;
       width: 100%;
+      
+      .content--wrapper {
+        width: 100%;
+      }
     }
   }
 }
@@ -87,6 +95,10 @@ p {
      -webkit-text-size-adjust: none;
   }
   
+  h1 {
+    @include h1-style-small();
+  }
+  
   h2 {
     @include h2-style-small();
   }
@@ -96,9 +108,12 @@ p {
     
     .main--wrapper {
       //@include span(16 at 9 of 24);
+      position: fixed;
       width: 100%;
       
       .content--wrapper {
+        top: 125px;
+        width: 100%;
         padding: 30px 15px 0 15px;
       }
     }
