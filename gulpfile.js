@@ -38,7 +38,7 @@ gulp.task('sass', function(){
     .pipe(sourcemaps.write('./maps'))
     
     //outputs CSS files in CSS folder
-    .pipe(gulp.dest('/Volumes/sites/dev.secure.list.co.uk/list.api.explorer/src/public'))
+    .pipe(gulp.dest('/Volumes/sites/dev.secure.list.co.uk/list.api.explorer/styles'))
     
     //live reload in all browsers
     .pipe(browsersync.reload({stream: true}));
