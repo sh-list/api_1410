@@ -55,7 +55,7 @@ p {
       position: fixed;
       top: 150px;
       width: 75.75%;
-      height: 100%;
+      height: calc(100% - 152px);
       padding: 30px 30px 0 30px;
       overflow: scroll;
     }
@@ -114,6 +114,7 @@ p {
       .content--wrapper {
         top: 125px;
         width: 100%;
+        height: calc(100% - 126px);
         padding: 30px 15px 0 15px;
       }
     }
