@@ -53,12 +53,24 @@ p {
     .content--wrapper {
       //background-color: palegoldenrod;
       position: fixed;
-      top: 150px;
+      top: 120px;
       width: 75.75%;
-      height: calc(100% - 152px);
-      padding: 30px 30px 0 30px;
+      height: calc(100% - 142px);
+      padding: 10px 30% 0 30px;
       overflow: scroll;
+      //border-top: 1px solid silver;
     }
+    
+/*
+    .content--wrapper:before {
+      background-color: rgba(silver, 0.3);
+      content: ' ';
+      position: fixed;
+      top: 120px;
+      width: 50%;
+      height: 1px;
+    }
+*/
   }  
 }
 
@@ -78,7 +90,10 @@ p {
       width: 100%;
       
       .content--wrapper {
+        top: 200px;
         width: 100%;
+        height: calc(100% - 222px);
+        padding: 10px 30px 0 30px;
       }
     }
   }
@@ -112,10 +127,10 @@ p {
       width: 100%;
       
       .content--wrapper {
-        top: 125px;
+        top: 170px;
         width: 100%;
-        height: calc(100% - 126px);
-        padding: 30px 15px 0 15px;
+        height: calc(100% - 192px);
+        padding: 10px 15px 0 15px;
       }
     }
   }

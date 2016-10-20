@@ -3,6 +3,7 @@
   
   .menu--accordion {
     background-color: rgba($primary-color, 0.4);
+    box-shadow: -1px 1px 1px $primary-color inset;
     
     .sub__item {
       border-bottom: 0;
