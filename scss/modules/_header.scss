@@ -49,16 +49,17 @@
 }
 
 .key__area__wrapper {
-  background-color: saturate(cadetblue, 30%);
+  //background-color: saturate(cadetblue, 30%);
   position: fixed;
-  top: 100px;
+  top: 120px;
   left: 0;
   width: 100%;
-  padding: 8px 30px 8px 30px;
+  padding: 14px 30px 0 30px;
   z-index: 1;
   
   input {
-    background-color: rgba(whitesmoke, 0.4);
+    //background-color: rgba(whitesmoke, 0.4);
+    background-color: #fff;
     color: darkslategray;
     width: 100%;
     height: 36px;
@@ -66,7 +67,8 @@
     outline: 0;
     border: 0;
     border-radius: 0;
-    box-shadow: none;
+    //box-shadow: none;
+    box-shadow: 0px 0px 16px rgba(cornflowerblue, 0.1);
     font-size: 14px;
   }
   
@@ -106,11 +108,11 @@
   }
   
   .key__area__wrapper {
-    top: 80px;
-    padding: 8px 15px 8px 15px;
+    top: 95px;
+    padding: 8px 15px 0 15px;
     
     input {
-      height: 30px;
+      //height: 30px;
     }
   } 
 }
@@ -119,8 +121,9 @@
 
 
 //Media queries - Desktop Layout: 1220px
-@media only screen and (min-width: 1220px) {
+@media only screen and (min-width: 1024px) {
   .header--api--wrapper {
+    display: none;
     width: 75.75%;
     left: 24.25%;
     
@@ -130,6 +133,7 @@
   }
   
   .key__area__wrapper {
+    top: 40px;
     left: 24.25%;
     width: 75.75%;
   }  

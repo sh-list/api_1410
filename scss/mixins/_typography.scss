@@ -29,7 +29,7 @@
 
 @mixin h2-style-docs() {
   //background-color: silver;
-  color: lighten($primary-color, 15%);
+  color: rgba($primary-color, 0.5);
   padding: 4px 0 8px 0;
   font-size: responsive 16px 18px;
   text-transform: capitalize;
@@ -38,7 +38,8 @@
 
 
 @mixin h3-style-docs() {
-  background-color: lighten($primary-color, 15%);
+  background-color: lightslategray;
+  //color: rgba($primary-color, 0.65);
   color: whitesmoke;
   display: inline;
   margin: 0;
@@ -48,6 +49,16 @@
   font-weight: normal;
   text-transform: capitalize;
   letter-spacing: 0.06em;
-  border-radius: 3px;
+  //border-radius: 3px;  
+}
+
+
+@mixin h3-search-results() {
+  background-color: rgba($primary-color, 0.5);
+  color: whitesmoke;
+  display: block;
+  margin-bottom: 20px;
+  font-size: responsive 14px 16px;
+  text-transform: initial;
 }
 

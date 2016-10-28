@@ -1,5 +1,6 @@
 .price__table__wrapper {
   margin-top: 40px;
+  font-size: responsive 13px 15px;
   border-left: 1px solid silver;
   border-top: 1px solid silver;
   
@@ -20,8 +21,9 @@
       }
       
       .price--table--cell {
-        width: 33.3333%;
-        padding: 20px;
+        //width: 33.3333%;
+        width: 25%;
+        padding: 20px 10px;
         border-right: 1px solid silver;
         border-bottom: 1px solid silver;
       }

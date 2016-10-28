@@ -1,8 +1,10 @@
 #api-_ {
+    //background-color: snow;
+    //padding: 30px;
     
   h3 {
     @include h3-style-docs();
-  }
+  }  
 }
 
 #api-Categories, #api-Events, #api-Places, #api-Search {
@@ -16,9 +18,51 @@
 
 .docs--table {
   //background-color: pink;
-  font-size: 14px;
+  font-size: 14px;  
+}
+
+thead {
+  color: whitesmoke;
+  font-size: 15px;
+  letter-spacing: 0.1em;
   
-  thead {
-    font-size: 15px;    
+  tr {
+    
+    th {
+      background-color: rgba($primary-color, 0.5);
+      padding: 8px;
+    }
+  }   
+}
+
+tbody {
+  
+  tr {
+    font-size: 14px;
+    
+    td {
+      padding: 0 8px;
+      vertical-align: middle;
+    }
   }
+}
+
+
+pre.language-html[data-type="get"]::before {
+  background-color: $highlight-color;
+}
+
+pre.language-html::before {
+  color: whitesmoke;
+  content: 'GET';
+  position: absolute;
+  display: inline-block;
+  top: -30px;
+  left: 0;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-family: 'montserratregular', 'helvetica', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
 }

@@ -18,6 +18,11 @@
   .main--navigation {
     //background-color: pink;
     
+    .list__logo {
+      position: absolute;
+      display: none;
+    }
+    
     ul {
       font-family: 'montserratregular', 'helvetica', sans-serif;
       font-size: 14px;
@@ -83,6 +88,7 @@
       bottom: 0;
       padding: 6px 0;
       font-family: 'montserratregular', 'helvetica', sans-serif;
+      box-shadow: -1px 1px 1px $primary-color inset;
       
       .footer-item {
         line-height: 13px;

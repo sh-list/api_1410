@@ -49,7 +49,7 @@ gulp.task('sass', function(){
 gulp.task('watch', function(){
    gulp.watch('./scss/**/*.{scss, sass}', ['sass']);
    gulp.watch('/Volumes/sites/dev.secure.list.co.uk/list.api.explorer/src/**/*.html').on('change', browsersync.reload);
-   gulp.watch('/Volumes/sites/dev.secure.list.co.uk/list.api.explorer/src/**/*.css').on('change', browsersync.reload);
+   gulp.watch('/Volumes/sites/dev.secure.list.co.uk/list.api.explorer/styles/**/*.css').on('change', browsersync.reload);
 });
 
 
