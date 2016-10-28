@@ -52,3 +52,13 @@
   //border-radius: 3px;  
 }
 
+
+@mixin h3-search-results() {
+  background-color: rgba($primary-color, 0.5);
+  color: whitesmoke;
+  display: block;
+  margin-bottom: 20px;
+  font-size: responsive 14px 16px;
+  text-transform: initial;
+}
+
