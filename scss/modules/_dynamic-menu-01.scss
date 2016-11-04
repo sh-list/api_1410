@@ -81,3 +81,13 @@
     right: 15px;
   }
 }
+
+
+
+
+//Media queries - Mobile - Small Portrait Layout: 380px
+@media only screen and (max-height: 380px) {
+  .dynamic--menu .menu--accordion .sub__item a {
+    
+  }
+}

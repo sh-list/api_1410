@@ -18,35 +18,73 @@
 
 .docs--table {
   //background-color: pink;
-  font-size: 14px;  
-}
-
-thead {
-  color: whitesmoke;
-  font-size: 15px;
-  letter-spacing: 0.1em;
+  font-size: 14px;
+  //display: block;
   
-  tr {
-    
-    th {
-      background-color: rgba($primary-color, 0.5);
-      padding: 8px;
-    }
-  }   
-}
-
-tbody {
-  
-  tr {
+  thead {
+    color: whitesmoke;
+    //display: block;
+    font-family: 'montserratregular', 'helvetica', sans-serif;
     font-size: 14px;
+    letter-spacing: 0.06em;
     
-    td {
-      padding: 0 8px;
-      vertical-align: middle;
-    }
+    tr {
+      
+      th {
+        background-color: rgba($primary-color, 0.5);
+        padding: 8px;
+      }
+      
+      th.row_field {
+        //background-color: plum;
+        width: 30%;
+      }
+      
+      th.row_type {
+        //background-color: indianred;
+        width: 10%;
+      }
+      
+      th.row_description {
+        //background-color: lightseagreen;
+        width: 60%;
+      }
+      
+      th.row_name {
+        //background-color: olive;
+        width: 30%;
+      }
+      
+      th.row_description1 {
+        //background-color: magenta;
+        width: 70%;
+      }
+    }   
   }
+  
+  tbody {
+    //display: block;
+    
+    tr {
+      font-size: 14px;
+      
+      td {
+        padding: 0 8px;
+        vertical-align: middle;
+        border: 1px solid #e0e0e0;
+        
+        p {
+          margin: 8px 0;
+        }
+      }
+      
+      td.code {
+        //background-color: lightcoral;
+        font-family: "Source Code Pro", monospace;
+      }
+    }
+  }    
 }
-
 
 pre.language-html[data-type="get"]::before {
   background-color: $highlight-color;
@@ -65,4 +103,49 @@ pre.language-html::before {
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 0.1em;
+}
+
+
+
+
+//Media queries - Mobile Layout: 320px
+@media only screen and (max-width: 767px) {
+  .docs--table {
+    //width: 60%;
+    
+    thead {
+      font-size: 13px;
+    }
+    
+    tbody {
+      
+      tr {
+        font-size: 12px;
+        
+        td {
+          
+        }
+        
+        td p {
+          line-height: 1.5em;
+        }
+        
+        td p code {
+          //background-color: peru;
+          //font-size: 70%;
+          
+          .rwd-break {
+            display: block;
+          }
+        }
+      }
+    }    
+  }
+  
+  p code {
+    .rwd-break {
+      //background-color: tomato;
+      display: block;
+    }
+  } 
 }

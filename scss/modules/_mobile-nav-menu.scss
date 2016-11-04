@@ -180,4 +180,52 @@
   }  
 }
 
+
+
+
+//Media queries - Tablet (landscape width) and Mobile (portrait height) Layout: 380px height
+@media only screen and (max-width: 1024px) and (max-height: 380px) {
+  .sidebar--menu {
+    //background-color: firebrick;
+    //position: static;
+    padding-top: 0;
+    
+    .main--navigation {
+      //background-color: goldenrod;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      max-height: 290px;
+      overflow: scroll;
+      
+      ul li > a {
+        //background-color: lightcoral;
+        padding: 10px 15px;
+        font-size: 11px;
+      }
+      
+      ul li > .api__search:before {
+        padding: 2px 4px;
+      }
+    }
+    
+    .footer--container {
+      //background-color: pink;
+      position: relative;
+      //height: 80px;
+      margin-top: 40px;
+      
+      ul {
+        position: relative;
+        margin-top: 40px;
+        
+        .footer-item {
+          //background-color: tan;
+        }
+      }
+    }
+  }
+}
+
  
