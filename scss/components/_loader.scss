@@ -1,0 +1,40 @@
+.loader--circle {
+  //background-color: plum;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: calc(50vh - 60px) auto;
+  
+  div {
+    background-color: lightslategray;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: circlebounce 2.0s infinite ease-in-out;
+  }
+  
+  div:nth-child(1) {
+    animation-delay: -1.0s;
+  }
+  
+  @keyframes circlebounce {
+    0%, 100% {
+      transform: scale(0.0);
+    }
+    
+    50% {
+      transform: scale(1.0);
+    }
+  }
+  
+  p {
+    //background-color: lightcoral;
+    position: absolute;
+    display: block;
+    margin-top: 70px;
+  }
+}

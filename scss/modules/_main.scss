@@ -27,6 +27,10 @@ p {
   line-height: 1.6em;
 }
 
+.rwd-break {
+  display: none;
+}
+
 
 
 
@@ -57,7 +61,7 @@ p {
       width: 75.75%;
       height: calc(100% - 142px);
       padding: 10px 30% 0 30px;
-      overflow: scroll;
+      overflow: auto;
       //border-top: 1px solid silver;
     }
     

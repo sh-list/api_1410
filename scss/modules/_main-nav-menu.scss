@@ -71,6 +71,11 @@
           }
         }
         
+        .api__search {
+          //background-color: tomato;
+          padding: 8px 30px;
+        }
+        
         .api__search:before {
           background-color: $highlight-color;
           content: 'GET';
