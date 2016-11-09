@@ -133,6 +133,17 @@
     .main--navigation {
       //background-color: tomato;
       
+      ul {
+        
+        li {
+          
+          .api__search {
+            //background-color: tan;
+            padding: 6px 15px;
+          }
+        }      
+      }      
+      
       ul li > a {
         padding: 14px 15px;
         font-size: 12px;
@@ -198,7 +209,7 @@
       width: 100%;
       max-height: 290px;
       overflow: scroll;
-      
+            
       ul li > a {
         //background-color: lightcoral;
         padding: 10px 15px;
@@ -214,11 +225,11 @@
       //background-color: pink;
       position: relative;
       //height: 80px;
-      margin-top: 40px;
+      margin-top: 75px;
       
       ul {
         position: relative;
-        margin-top: 40px;
+        //margin-top: 40px;
         
         .footer-item {
           //background-color: tan;

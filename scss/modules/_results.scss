@@ -16,6 +16,7 @@
       position: relative;
       display: inline-block;
       font-family: 'montserratregular', 'helvetica', sans-serif;
+      font-size: responsive 14px 16px;
       
       a {
         color: $primary-color;
@@ -159,10 +160,16 @@
         
         a {
           color: rgba($primary-color, 0.5);
+          font-size: responsive 14px 16px;
           
           &:hover {
             color: $highlight-color;
-          }
+          }          
+        }
+        
+        p {
+          //background-color: thistle;
+          margin: 2px 0 14px 0;
         }
       }
       
@@ -185,7 +192,7 @@
           color: $primary-color;
           padding-bottom: 5px;
           font-family: 'montserratregular', 'helvetica', sans-serif;
-          //font-size: responsive 14px 16px;
+          font-size: responsive 14px 16px;
         }
         
         .event--list {
@@ -247,6 +254,23 @@
 
 //Media queries - Mobile Layout: 320px
 @media only screen and (max-width: 767px) {
+  .search--results--wrapper {
+    //background-color: khaki;
+    
+    .results--list {
+      //background-color: plum;
+      
+      li {
+        //background-color: coral;        
+      }
+      
+      p {
+        //background-color: lightcoral;
+        margin: 2px 0 14px 0;
+      }
+    }
+  }
+  
   .place, .event1 {
     
     .place--container {
@@ -276,6 +300,10 @@
       }
       
       .upcoming--info {
+        
+        .upcoming__label {
+          margin: 0 0 10px 0;
+        }
         
         li {
           width: 48%;
