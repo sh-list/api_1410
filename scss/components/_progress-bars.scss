@@ -1,0 +1,101 @@
+.bar--indicator {
+  //background-color: plum;
+  width: 100%;
+  
+  .bar {
+    background-color: rgba($primary-color, 0.2);
+    position: relative;
+    height: 30px;
+    //margin-bottom: 50px;
+    font-family: 'montserratregular' sans-serif;
+    
+    .key__usage {
+      background-color: rgba($primary-color, 0.3);
+      color: whitesmoke;
+      position: absolute;
+      top: 0;
+      height: 30px;
+      padding: 0 10px;
+    }
+    
+    .key1 {
+      width: 70%;
+      animation: key1 4s ease-out;
+    }
+    
+    .key2 {
+      width: 40%;
+      animation: key2 4s ease-out;
+    }
+    
+    @keyframes key1 {
+      0% {
+        width: 0;
+      }
+      
+      100% {
+        width: 70%;
+      }
+    }
+    
+    @keyframes key2 {
+      0% {
+        width: 0;
+      }
+      
+      100% {
+        width: 40%;
+      }
+    }
+    
+    .key1:before, .key2:before {
+      color: whitesmoke;
+      //content: '70%';
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      float: right;
+      animation: show-value 4s ease-out;
+    }
+    
+    .key1:before {
+      content: '70%';
+    }
+    
+    .key2:before {
+      content: '400 / 1,000';
+    }    
+    
+    @keyframes show-value {
+      0% {
+        //background-color: goldenrod;
+        visibility: hidden;
+      }
+      
+      95% {
+        visibility: hidden;
+      }
+      
+      100% {
+        //background-color: plum;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+
+
+
+//Media queries - Mobile Layout: 320px
+@media only screen and (max-width: 767px) {
+  .bar--indicator {
+    
+    .bar {
+      
+      .key1:before, .key2:before {
+        font-size: 14px;
+      }
+    }
+  }
+}

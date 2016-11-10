@@ -1,0 +1,142 @@
+p > strong {
+  //color: $highlight-color;
+  margin: 0 1px;
+  letter-spacing: 0.04em;
+  font-family: 'montserratregular' sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.api__account__wrapper {
+  //background-color: seashell;
+  
+  .api__usage__wrapper {
+    //background-color: tan;
+    
+    h2 {
+      @include account-subheads();
+    }
+    
+    .api__call__limit {
+      //background-color: lightcoral;      
+    }
+  }
+  
+  .api__keys__wrapper {
+    //background-color: peachpuff;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid silver;
+    
+    h2 {
+      @include account-subheads();
+    }
+    
+    .api__saved__key {
+      //background-color: peachpuff;
+      
+      .user--key {
+        //background-color: peru;
+        margin: 0 0 40px 0;
+        
+        #user--key--name {
+          @include user-key-title();
+        }
+        
+        .creation--date {
+          color: rgba($primary-color, 0.6);
+          display: block;
+          margin-top: 5px;
+          font-size: 14px;          
+        }
+        
+        .api__key__input__wrapper {
+          position: relative;
+          
+          .api__key__input {
+            background-color: rgba($highlight-color, 0.2);
+            color: lightslategray; // styling for placeholder text
+            opacity: 0.6; // styling for placeholder text
+            width: calc(100% - 220px);
+            height: 35px;
+            padding-left: 10px;
+            margin-top: 20px;
+            outline: 0;
+            border: 0;
+            box-shadow: none;
+            font-size: 14px;
+          }
+        }        
+      }      
+    }
+    
+    .api__search__form > h4 {
+      position: relative;
+      padding-left: 30px;
+      font-family: 'montserratregular' sans-serif;
+      font-size: 18px;
+      
+      &:before {
+        background-color: rgba($primary-color, 0.2);
+        position: absolute;
+        content: ' ';
+        top: 50%;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        transform: translateY(-50%);        
+      }
+    }
+  }
+}
+
+
+
+
+//Media queries - Mobile Layout: 320px
+@media only screen and (max-width: 767px) {
+  .api__account__wrapper {
+    
+    .api__usage__wrapper {
+      
+      h2 {
+        @include account-subheads-small();
+      }
+    }
+    
+    .api__keys__wrapper {
+      
+      h2 {
+        @include account-subheads-small();
+      }
+      
+      .api__saved__key {
+        
+        .user--key {
+          
+          #user--key--name {
+            @include user-key-title-small();
+          }
+          
+          .creation--date {
+            font-size: 12px;
+          }
+          
+          .api__key__input__wrapper {
+            
+            .api__key__input {
+              width: calc(100% - 140px);
+              height: 30px;
+            }
+          }
+        }
+      }
+      
+      .api__search__form > h4 {
+        //color: firebrick;
+        padding-left: 25px;
+        font-size: 14px;
+      }
+    }    
+  }  
+}
