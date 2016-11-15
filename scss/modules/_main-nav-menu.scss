@@ -116,7 +116,7 @@
     
     ul {
       //background-color: salmon;
-      background-color: rgba($primary-color, 0.4);
+      background-color: $primary-tint;
       position: absolute;
       width: 100%;
       left: 0;
@@ -188,5 +188,54 @@
     //position: relative;
     display: block;
   }    
+}
+
+
+
+
+//Media queries - short Desktop (landscape height) Layout: 540px height
+@media only screen and (max-height: 540px) {
+  .main--menu {
+    //background-color: firebrick;
+    //position: static;
+    padding-top: 0;
+    
+    .main--navigation--large {
+      //background-color: goldenrod;
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 100%;
+      //max-height: 505px;
+      max-height: calc(100vh - 20px);
+      overflow: scroll;
+            
+      ul li > a {
+        //background-color: lightcoral;
+        //padding: 10px 15px;
+        //font-size: 11px;
+      }
+      
+      ul li > .api__search:before {
+        //padding: 2px 4px;
+      }
+    }
+    
+    .footer--container {
+      //background-color: pink;
+      position: relative;
+      //height: 80px;
+      margin-top: 120px;
+      
+      ul {
+        position: relative;
+        //margin-top: 40px;
+        
+        .footer-item {
+          //background-color: tan;
+        }
+      }
+    }
+  }
 }
 
