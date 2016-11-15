@@ -38,3 +38,40 @@
     margin-top: 70px;
   }
 }
+
+
+.loader--results {
+  //background-color: plum;
+  margin: 100px auto 0;
+  width: 100px;
+  text-align: center;
+  
+  div {
+    background-color: rgba($primary-color, 0.4);
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    animation: loader-results 1.4s infinite ease-in-out both;
+  }
+  
+  .circle1 {
+    animation-delay: -0.32s;
+  }
+  
+  .circle2 {
+    animation-delay: -0.16s;
+  }
+  
+  @keyframes loader-results {
+    0%, 80%, 100% {
+      opacity: 0.1;
+      transform: scale(0);
+    }
+    
+    40% {
+      opacity: 1;
+      transform: scale(1.0);
+    }
+  }
+}

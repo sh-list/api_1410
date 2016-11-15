@@ -60,6 +60,7 @@
   //background-color: lightseagreen;
   padding: 0;
   
+/*
   button.tab {
     background-color: $primary-color;
     color: $highlight-color;
@@ -72,6 +73,28 @@
   button.tab.active {
     background-color: $highlight-color;
     color: $primary-color;
+  }
+*/
+  
+  .view--feature {
+    //background-color: coral;
+    margin-top: 10px;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;    
+    
+    .feature__button {
+      background-color: $primary-color;
+      color: $highlight-color;
+      display: inline-block;
+      padding: 4px 10px;
+      cursor: pointer;
+    }
+    
+    .feature__button.active {
+      background-color: $highlight-color;
+      color: $primary-color;
+    }
   }
   
   .place--container {

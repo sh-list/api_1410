@@ -20,11 +20,13 @@
     
     .key1 {
       width: 70%;
+      transition: width 4s;
       animation: key1 4s ease-out;
     }
     
     .key2 {
       width: 40%;
+      transition: width 4s;
       animation: key2 4s ease-out;
     }
     

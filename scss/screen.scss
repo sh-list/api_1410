@@ -9,10 +9,12 @@
 @import "components/scroll";
 @import "components/tables";
 @import "components/progress-bars";
+@import "components/error-message";
 
 @import "mixins/typography";
 
 @import "modules/main";
+@import "modules/home";
 @import "modules/main-nav-menu";
 @import "modules/mobile-nav-menu";
 //@import "modules/dynamic-menu";

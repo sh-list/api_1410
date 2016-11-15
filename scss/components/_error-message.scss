@@ -1,0 +1,92 @@
+.error--flag {
+  position: relative;
+  display: block;
+  width: 600px;
+  //height: 180px;
+  border: 1px solid indianred;
+  //border-radius: 4px;
+  clear: fix;
+  
+  #error__icon {
+    background-color: indianred;
+    color: whitesmoke;
+    position: absolute;
+    //top: 0;
+    //left: 0;
+    width: 10%;
+    height: 100%;
+    padding-top: 2px;
+    font-size: 2em;
+    text-align: center;
+    text-shadow: 1px 1px 1px firebrick;
+  }
+  
+  #error__message {
+    background-color: whitesmoke;
+    float: right;
+    width: 90%;
+    //height: 100%;
+    margin: 0;
+    padding: 10px 20px;
+  }
+}
+
+.terms__wrapper {
+  background-color: whitesmoke;
+  //background-color: rgba(cornflowerblue, 0.05);
+  margin-top: 60px;
+  padding: 20px 40px 20px 30px;
+  height: 600px;
+  border: 1px solid silver;
+  overflow: auto;
+  
+  h1, h2, h3 {
+    background-color: initial;
+    color: darkslategray;
+    padding: 0;
+    margin: 0;
+  }
+  
+  form {
+    #terms--subhead {
+      display: block;
+      padding: 20px 0 18px 0;
+      font-size: 14px;
+    }
+    
+    .terms--copy {
+      font-size: 14px;
+    }
+    
+    .terms--copy > strong {
+      font-size: 14px;
+    }
+  }
+}
+
+.terms {
+  background-color: transparent;
+  color: $primary-color;
+  margin: 20px 5px 0 0;
+  padding: 6px 12px;
+  border: 1px solid $primary-color;
+  font-size: 16px;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: $highlight-color;
+    color: whitesmoke;
+    border-color: $highlight-color;
+    transition: .2s;
+  }
+}
+
+.terms.decline {
+  color: $primary-color;
+  
+  &:hover {
+    background-color: indianred;
+    color: whitesmoke;
+    border-color: indianred;
+  }
+}
