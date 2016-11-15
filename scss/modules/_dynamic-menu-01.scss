@@ -2,7 +2,7 @@
   //background-color: salmon;
   
   .menu--accordion {
-    background-color: rgba($primary-color, 0.4);
+    background-color: $primary-tint;
     box-shadow: -1px 1px 1px $primary-color inset;
     
     .sub__item {

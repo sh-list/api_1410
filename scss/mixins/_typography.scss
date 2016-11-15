@@ -62,3 +62,66 @@
   text-transform: initial;
 }
 
+
+@mixin account-subheads() {
+  color: $highlight-color;
+  position: relative;
+  margin: 40px 0 25px 0;
+  padding-left: 30px;
+  font-family: 'montserratregular' sans-serif;
+  font-size: 20px;
+  
+  &:before {
+    background-color: rgba($highlight-color, 0.4);
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    transform: translateY(-50%);          
+  }
+}
+
+
+@mixin account-subheads-small() {
+  @include account-subheads();
+  padding-left: 25px;
+  font-size: 16px;
+  
+  &:before {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+
+@mixin user-key-title() {
+  background-color: transparent;
+  color: rgba($primary-color, 0.6);
+  position: relative;
+  display: inline-block;
+  margin-bottom: 5px;
+  padding-left: 15px;
+  font-family: 'montserratregular' sans-serif;
+  font-size: 18px;
+  letter-spacing: 0;
+  text-transform: initial;
+  
+  &:before {
+    //background-color: rgba($primary-color, 0.4);
+    content: '»';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    //width: 18px;
+    //height: 18px;
+    transform: translateY(-50%);
+  }
+}
+
+
+@mixin user-key-title-small() {
+  @include user-key-title();
+  font-size: 14px;
+}
