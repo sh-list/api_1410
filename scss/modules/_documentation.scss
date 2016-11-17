@@ -4,8 +4,29 @@
     
   h3 {
     @include h3-style-docs();
-  }  
+  }
+  
+  .intro--copy {
+    //background-color: lightcoral;
+    margin-top: 12px;
+    //font-family: 'domineregular', 'georgia', serif;
+    //font-size: responsive 14px 18px;
+  }
+  
+  p {
+    margin: 2px 0 8px;
+  }
 }
+
+/*
+#header {
+  //background-color: lightcoral;
+}
+*/
+
+#api-_ > p:first-child {
+    background-color: coral;
+  }
 
 #api-Categories, #api-Events, #api-Places, #api-Search {
   //background-color: salmon;

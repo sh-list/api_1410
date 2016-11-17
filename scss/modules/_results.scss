@@ -48,6 +48,11 @@
       margin-bottom: 20px;
     }
   }
+  
+  .results--list > p {
+    //background-color: peru;
+    margin: 2px 0 8px;
+  }
 }
 
 /*
@@ -111,6 +116,10 @@
         width: 70%;
         padding-right: 15px;
         
+        span {
+          font-family: 'domineregular', 'georgia', serif;
+        }
+        
         .api__tags {
           //background-color: plum;
           font-size: 13px;
@@ -123,6 +132,7 @@
           padding: 2px 12px;
           margin: 0 5px 5px 0;
           border-radius: 24px;
+          font-family: 'montserratregular', 'helvetica', sans-serif;
           text-transform: lowercase;
           letter-spacing: 0.01em;
         }
@@ -142,6 +152,15 @@
         padding-left: 15px;
         font-size: responsive 13px 15px;
         line-height: 1.6em;
+        
+        h3 {
+          //background-color: lightcoral;
+          margin-bottom: 8px;
+          font-family: 'domineregular', 'georgia', serif;
+          font-size: inherit;
+          text-transform: initial;
+          letter-spacing: 0;
+        }
         
         .contact__detail {
           color: $primary-color;
@@ -313,7 +332,7 @@
             padding: 2px 10px;
           }
         }
-        
+                
         .place--contact--info {
           //background-color: seashell;
           width: 100%;

@@ -1,8 +1,8 @@
 .price__table__wrapper {
   margin-top: 40px;
   font-size: responsive 13px 15px;
-  border-left: 1px solid silver;
-  border-top: 1px solid silver;
+  //border-left: 1px solid silver;
+  //border-top: 1px solid silver;
   
   .price__table__content {
     //background-color: rgba($highlight-color, 0.1);
@@ -14,10 +14,9 @@
       //width: 33.3333%;
       
       .price--table--heading {
-        //color: $highlight-color;
-        font-family: 'montserratregular' sans-serif;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
+        //background-color: rgba($primary-color, 0.1);
+        color: $primary-color;
+        font-family: 'domineregular', 'georgia', serif;
       }
       
       .price--table--cell {
@@ -26,6 +25,28 @@
         padding: 20px 10px;
         border-right: 1px solid silver;
         border-bottom: 1px solid silver;
+      }
+      
+      #empty--cell {
+        //background-color: rgba($primary-color, 0.1);
+        width: 20%;
+        border: none;
+        border-right: 1px solid silver;
+        border-bottom: 1px solid silver;
+      }
+      
+      .bottom--row {
+        //background-color: rosybrown;
+        //border-bottom: none;
+      }
+      
+      .final--column {
+        border-right: none;
+      }
+      
+      .table--heading--col {
+        //background-color: lightcoral;
+        width: 20%;
       }
     }
   }
@@ -67,6 +88,10 @@
         .price--table--cell {
           width: 25%;
           padding: 5px;
+        }
+        
+        #empty--cell {
+          width: 25%;
         }
       }
     }

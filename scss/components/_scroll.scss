@@ -5,7 +5,8 @@
   bottom: 0;
   left: calc(100% - 110px);
   width: 80px;
-  height: 40px;
+  height: 50px;
+  font-family: 'domineregular', 'georgia', serif;
   text-align: center;
   border-radius: 3px 3px 0 0;
   z-index: 1;
@@ -16,40 +17,25 @@
     color: $primary-color;
     display: inline-block;
     position: relative;
-    //width: 40px;
+    width: 100%;
     font-size: 24px;
     transition: .4s ease;
     
     &:hover {
       color: $highlight-color;
-      transform: translateY(-10px);
+      transform: translateY(-6px);
     }
     
     &:hover:before {
       //background-color: cadetblue;
-      content: 'top';
+      content: 'Top';
       display: block;
       position: absolute;
-      bottom: -12px;
-      //width: 40px;
+      bottom: -16px;
+      width: 100%;
       font-size: 14px;
-      margin: 0 auto;
-    }
-    
-/*
-    &:hover:after {
-      background-color: lightslategray;
-      content: ' ';
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;      
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      z-index: -1;
-    }
-*/
+      //margin: 0 auto;
+    }    
   }  
 }
 
@@ -60,6 +46,14 @@
 @media only screen and (max-width: 767px) {
   .scroll--top--container {
     left: calc(50% - 40px);
+    
+    #scroll--top {
+      font-size: 22px;
+      
+      &:hover:before {
+        font-size: 12px;
+      }      
+    }    
   }
 }
 

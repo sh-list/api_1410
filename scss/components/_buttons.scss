@@ -187,11 +187,75 @@
   }  
 }
 
+.pagination {
+  background-color: transparent;
+  color: $primary-color;
+  position: relative;
+  width: 96px;
+  height: 28px;
+  font-family: 'domineregular', 'georgia', serif;
+  font-size: 14px;
+  cursor: pointer;
+  
+  &:hover {
+    color: $highlight-color;
+  }
+}
+
+.next--button {
+  text-align: left;
+}
+
+.previous--button {
+  text-align: right;
+}
+
+.next--button:before, .previous--button:before {
+  //background-color: plum;
+  content: '\02192';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 20px;
+  font-size: 24px;
+  transition: transform .4s ease-in-out;
+}
+
+.previous--button:before {
+  content: '\02190';
+  left: 0;
+}
+
+.next--button:hover:before {
+  transform: translateX(3px);
+}
+
+.previous--button:hover:before {
+  transform: translateX(-3px);
+}
+
+
+
+
+//Media queries - Mobile Layout: 320px
+@media only screen and (max-width: 767px) {
+  .pagination {
+    width: 86px;
+    height: 24px;
+    font-size: 12px;
+  }
+    
+  .next--button:before, .previous--button:before {
+    font-size: 22px;
+  }
+}
+
+
 
 
 
 //Media queries - Desktop Layout: 1220px
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
 .button--container--new {
   position: fixed;  
   display: inline;
