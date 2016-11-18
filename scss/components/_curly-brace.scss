@@ -1,0 +1,43 @@
+.brace {
+  background-color: transparent;
+  background-image:
+    radial-gradient(circle at 0 0, rgba($highlight-color, 0) 14.5px, $highlight-color 15.5px, $highlight-color 19.5px, rgba($highlight-color, 0) 20.5px),
+    radial-gradient(circle at 35px 0, rgba($highlight-color, 0) 14.5px, $highlight-color 15.5px, $highlight-color 19.5px, rgba($highlight-color, 0) 20.5px);
+  background-size: 35px 20px;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  color: $highlight-color;
+  position: relative;
+  width: auto;
+  min-width: 35px;
+  margin: 0 5px 25px;
+  padding-bottom: 20px;
+  //font-size: 2em;
+  border: none;
+  
+  &:before {
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    left: -15px;
+    width: 50%;
+    height: 45px;
+    margin-top: -5px;
+    border-top: 5px solid $highlight-color;
+    border-left: 1px solid transparent;
+    border-top-left-radius: 20% 45px;
+  }
+  
+  &:after {
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    right: -15px;
+    width: 50%;
+    height: 45px;
+    margin-top: -5px;
+    border-top: 5px solid $highlight-color;
+    border-right: 1px solid transparent;
+    border-top-right-radius: 20% 45px;
+  }
+}

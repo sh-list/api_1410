@@ -50,8 +50,10 @@
   form {
     #terms--subhead {
       display: block;
-      padding: 20px 0 18px 0;
+      padding: 20px 0 0 0;
+      font-family: 'montserratregular', 'helvetica', sans-serif;
       font-size: 14px;
+      line-height: 22px;
     }
     
     .terms--copy {
@@ -88,5 +90,23 @@
     background-color: indianred;
     color: whitesmoke;
     border-color: indianred;
+  }
+}
+
+
+
+
+//Media queries - Mobile Layout: 320px
+@media only screen and (max-width: 767px) {
+  .error--flag {
+    width: 100%;
+    
+    #error__icon {
+      width: 15%;
+    }
+    
+    #error__message {
+      width: 85%;
+    }
   }
 }
