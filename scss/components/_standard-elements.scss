@@ -1,0 +1,376 @@
+/* --------------------------------------------------------------
+   Button Defaults
+-------------------------------------------------------------- */
+.btn {
+  background-color: transparent;
+  color: $primary-color;
+  padding: 6px 10px;
+  font-family: 'montserratlight', 'helvetica', sans-serif;
+  font-size: 1em;
+  border: 1px solid $primary-color;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all .4s;
+  
+  &:hover {
+    color: $highlight-color;
+    border-color: $highlight-color;
+  }
+}
+
+.btn-primary {
+  //background-color: plum;
+}
+
+.btn-secondary {
+  color: silver;
+  border-color: silver;
+  
+  &:hover {
+    color: $primary-color;
+    border-color: $primary-color;
+  }
+}
+
+.btn-action {
+  padding: 6px 14px;
+  
+  span {
+    position: relative;
+    right: 0;
+    transition: right .4s;
+  }
+  
+  span:after {
+    content: '»';
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    transition: right .4s;
+  }
+  
+  &:hover span {
+    right: 6px;
+  }
+  
+  &:hover span:after {
+    opacity: 1;
+    transform: translateX(12px);
+  }
+}
+
+.btn-success {
+  background-color: $highlight-color;
+  color: whitesmoke;
+  border-color: $highlight-color;
+  
+  &:hover {
+    background-color: darken($highlight-color, 15%);
+    color: whitesmoke;
+    border-color: darken($highlight-color, 15%);
+  }
+}
+
+.btn-info {
+  background-color: rgba(silver, 0.5);
+  color: cadetblue;
+  font-family: 'montserratregular', 'helvetica', sans-serif;
+  border-color: transparent;
+  border-radius: 2px;
+  
+  &:hover {
+    background-color: #c1cee3;
+    color: cadetblue;
+    border-color: transparent;
+  }
+}
+
+.btn-warning {
+  background-color: whitesmoke;
+  color: darksalmon;
+  border-color: darksalmon;
+  
+  &:hover {
+    background-color: transparent;
+    color: firebrick;
+    border-color: firebrick;
+  }
+}
+
+.btn-danger {
+  background-color: indianred;
+  color: whitesmoke;
+  border-color: indianred;
+  
+  &:hover {
+    background-color: firebrick;
+    color: whitesmoke;
+    border-color: firebrick;
+  }
+}
+
+.btn-link {
+  color: rgba($primary-color, 0.5);
+  border-color: transparent;
+  
+  &:hover {
+    border-color: transparent;
+  }
+}
+
+
+/* --------------------------------------------------------------
+   Radio Button Defaults
+-------------------------------------------------------------- */
+.radio-button-list {
+  list-style: none outside none;
+}
+
+.radio-button-list li {
+  //background-color: peachpuff;
+  color: darkslategray;
+  position: relative;
+  display: flex;
+  align-items: center;
+  float: left;
+  width: 100px;
+  height: 24px;
+  margin: 0 30px 0 0;
+  font-size: responsive 14px 16px;
+}
+
+.radio-button-list li input[type=radio] {
+  position: absolute;
+  display: none;
+  //visibility: hidden;
+}
+
+.radio-button-list li label {
+  //background-color: peru;
+  position: relative;
+  display: block;
+  padding-left: 30px;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.25s linear;
+}
+
+.radio-button-list li:hover label {
+  color: $highlight-color;
+}
+
+.radio-button-list li .radio-check {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 3px solid darkslategray;
+  border-radius: 100%;
+  z-index: 3;
+  transition: border .25s linear;
+}
+
+.radio-button-list li:hover .radio-check {
+  border-color: $highlight-color;
+}
+
+.radio-button-list li .radio-check:before {
+  //background-color: tomato;
+  position: absolute;
+  display: block;
+  content: ' ';
+  width: 12px;
+  height: 12px;
+  top: 3px;
+  left: 3px;
+  border-radius: 100%;
+  transition: background 0.25s linear;
+}
+
+input[type=radio]:checked ~ .radio-check {
+  border: 3px solid $highlight-color;
+}
+
+input[type=radio]:checked ~ .radio-check:before {
+  background: $highlight-color;
+}
+
+input[type=radio]:checked ~ label {
+  color: $highlight-color;
+}
+
+
+/* --------------------------------------------------------------
+   Checkbox Defaults
+-------------------------------------------------------------- */
+.checkbox-list {
+  list-style: none outside none;
+}
+
+.checkbox-list li {
+  //background-color: peachpuff;
+  color: darkslategray;
+  position: relative;
+  display: flex;
+  align-items: center;
+  float: left;
+  width: 100px;
+  height: 24px;
+  margin: 0 30px 0 0;
+  font-size: responsive 14px 16px;
+}
+
+.checkbox-list li input[type=checkbox] {
+  position: absolute;
+  display: none;
+  //visibility: hidden;
+}
+
+.checkbox-list li label {
+  //background-color: peru;
+  position: relative;
+  display: block;
+  padding-left: 30px;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.25s linear;
+}
+
+.checkbox-list li:hover label {
+  color: $highlight-color;
+}
+
+.checkbox-list li .box-check {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 3px solid darkslategray;
+  //border-radius: 100%;
+  z-index: 3;
+  transition: border .25s linear;
+}
+
+.checkbox-list li:hover .box-check {
+  border-color: $highlight-color;
+}
+
+.checkbox-list li .box-check:before {
+  //background-color: tomato;
+  position: absolute;
+  display: block;
+  content: ' ';
+  width: 12px;
+  height: 12px;
+  top: 3px;
+  left: 3px;
+  //border-radius: 100%;
+  transition: background 0.25s linear;
+}
+
+input[type=checkbox]:checked ~ .box-check {
+  border: 3px solid $highlight-color;
+}
+
+input[type=checkbox]:checked ~ .box-check:before {
+  background: $highlight-color;
+}
+
+input[type=checkbox]:checked ~ label {
+  color: $highlight-color;
+}
+
+
+/* --------------------------------------------------------------
+   Form with Input Fields Defaults
+-------------------------------------------------------------- */
+.standard__form {
+  width: 100%;
+  
+  .input__group {
+    position: relative;
+    display: flex;
+    margin: 40px 0 10px 0;
+    
+    input {
+      background-color: transparent;
+      color: darkslategray;
+      //width: 100%;
+      height: 40px;
+      font-family: 'montserratlight' sans-serif;
+      font-size: 1.2em;
+      border: 0;
+      outline: 0;
+      box-shadow: none;
+      
+      &:focus {
+        color: $highlight-color;
+      }
+    }
+    
+    label {
+      color: silver;
+      position: absolute;
+      top: 0;
+      left: 0;
+      line-height: 40px;
+      z-index: -1;
+      transition: all .3s ease .1s;
+    }
+    
+    input:focus ~ label {
+      color: darkslategray;
+      transform: translate(-10%, -70%) scale(0.80);
+    }
+    
+    input:valid ~ label {
+      transform: translate(-10%, -70%) scale(0.80);
+    }
+    
+    .input__underline {
+      background-color: silver;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+    }
+    
+    .input__underline:before {
+      background-color: $highlight-color;
+      content: ' ';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      transition: all .3s ease .1s;
+    }
+    
+    input:focus ~ .input__underline:before {
+      width: 100%;
+    }
+  }
+  
+  .btn-action {
+    margin-top: 40px;
+  }
+}
+
+
+
+
+//Media queries - Mobile Layout: 320px
+@media only screen and (max-width: 767px) {
+  .btn-small {
+    padding: 5px 8px;
+    font-size: 0.85em;
+  }
+  
+  .btn-small.btn-action {
+    //background-color: burlywood;
+    padding: 5px 12px;
+  }
+}

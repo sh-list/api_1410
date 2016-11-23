@@ -72,7 +72,7 @@
   margin: 20px 5px 0 0;
   padding: 6px 12px;
   border: 1px solid $primary-color;
-  font-size: 16px;
+  font-size: 1em;
   cursor: pointer;
   
   &:hover {
@@ -108,5 +108,10 @@
     #error__message {
       width: 85%;
     }
+  }
+  
+  .terms {
+    font-size: 0.85em;
+    padding: 5px 10px;
   }
 }

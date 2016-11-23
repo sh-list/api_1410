@@ -11,11 +11,13 @@
 @import "components/progress-bars";
 @import "components/error-message";
 @import "components/curly-brace";
+@import "components/standard-elements";
 
 @import "mixins/typography";
 
 @import "modules/main";
-@import "modules/home";
+//@import "modules/home";
+@import "modules/home-01";
 @import "modules/main-nav-menu";
 @import "modules/mobile-nav-menu";
 //@import "modules/dynamic-menu";
