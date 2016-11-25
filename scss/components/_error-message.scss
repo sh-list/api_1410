@@ -48,30 +48,35 @@
   }
   
   form {
+    //padding-bottom: 10px;
+    
     #terms--subhead {
       display: block;
       padding: 20px 0 0 0;
       font-family: 'montserratregular', 'helvetica', sans-serif;
-      font-size: 14px;
+      font-size: responsive 12px 14px;
       line-height: 22px;
+      text-transform: initial;
+      letter-spacing: 0.02em;
     }
     
     .terms--copy {
-      font-size: 14px;
+      font-size: responsive 12px 14px;
     }
     
     .terms--copy > strong {
-      font-size: 14px;
+      font-size: responsive 12px 14px;
     }
   }
 }
 
-.terms {
+.terms--button {
   background-color: transparent;
   color: $primary-color;
   margin: 20px 5px 0 0;
   padding: 6px 12px;
   border: 1px solid $primary-color;
+  font-family: 'montserratlight', 'helvetica', sans-serif;
   font-size: 1em;
   cursor: pointer;
   
@@ -83,7 +88,7 @@
   }
 }
 
-.terms.decline {
+.terms--button.decline--button {
   color: $primary-color;
   
   &:hover {
@@ -110,7 +115,20 @@
     }
   }
   
-  .terms {
+  .terms__wrapper {
+    padding: 20px 30px 20px 20px;
+    
+    form {
+      //padding-bottom: 5px;
+      
+      #terms--subhead {
+        padding: 12px 0 0 0;
+        line-height: 1.6em;
+      }
+    }
+  }
+  
+  .terms--button {
     font-size: 0.85em;
     padding: 5px 10px;
   }

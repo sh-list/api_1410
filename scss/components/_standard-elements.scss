@@ -294,6 +294,8 @@ input[type=checkbox]:checked ~ label {
   .input__group {
     position: relative;
     display: flex;
+    float: left;
+    width: 100%;
     margin: 40px 0 10px 0;
     
     input {
@@ -372,5 +374,9 @@ input[type=checkbox]:checked ~ label {
   .btn-small.btn-action {
     //background-color: burlywood;
     padding: 5px 12px;
+  }
+  
+  .standard__form {
+    font-size: 0.8em;
   }
 }

@@ -59,12 +59,14 @@ p > strong {
             opacity: 0.6; // styling for placeholder text
             width: calc(100% - 220px);
             height: 35px;
-            padding-left: 10px;
+            padding: 0 10px;
             margin-top: 20px;
             outline: 0;
             border: 0;
+            //border-right: 10px solid tomato;
             box-shadow: none;
             font-size: 14px;
+            text-overflow: ellipsis;
           }
         }        
       }      

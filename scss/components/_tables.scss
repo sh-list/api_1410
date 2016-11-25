@@ -64,15 +64,16 @@
     content: ' ';
     position: absolute;
     display: block;
-    top: 3px;
-    left: 7px;
+    top: -7px;
+    left: -7px;
     width: 7px;
     height: 14px;
-    border: solid whitesmoke;
+    border: solid $highlight-color;
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
   }
   
+/*
   &:before {
     background-color: $highlight-color;
     content: '';
@@ -84,21 +85,23 @@
     height: 22px;
     border-radius: 22px;
   }
+*/
 }
 
 
 .crossmark {
-  background-color: $highlight-color;
+  //background-color: $highlight-color;
+  background-color: transparent;
   display: inline-block;
   width: 22px;
   height: 22px;
   position: relative;
   border: none;
-  border-radius: 22px;
+  //border-radius: 22px;
   margin: auto;
   
   &:before {
-    background-color: whitesmoke;
+    background-color: $highlight-color;
     display: inline-block;
     width: 16px;
     height: 3px;
@@ -111,7 +114,7 @@
   }
   
   &:after {
-    background-color: whitesmoke;
+    background-color: $highlight-color;
     display: inline-block;
     width: 16px;
     height: 3px;
@@ -176,6 +179,7 @@
     }
   }
   
+/*
   .checkmark {
     //margin: 0 4px 0 0;
     
@@ -192,4 +196,5 @@
       border-radius: 16px;
     }
   }  
+*/
 }
