@@ -81,7 +81,7 @@
     
     ul {
       //background-color: salmon;
-      background-color: rgba($primary-color, 0.4);
+      background-color: $primary-tint;
       position: absolute;
       width: 100%;
       left: 0;
@@ -160,6 +160,7 @@
       //background-color: goldenrod;
       
       ul {
+        //background-color: lightseagreen;
         padding: 5px 0;
         
         .footer-item {
