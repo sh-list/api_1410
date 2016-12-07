@@ -1,0 +1,37 @@
+.api--plans {
+  //background-color: bisque;
+  float: left;
+  width: 30%;
+  height: 200px;
+  
+  h3 {
+    @include h3-style-docs();
+    margin-bottom: 10px;
+  }
+}
+
+.api--plans--additions {
+  //background-color: seashell;
+  float: left;
+  width: 70%;
+  height: 200px;
+  //margin-top: 30px;
+  
+  h3 {
+    @include h3-style-docs();
+    margin-bottom: 10px;
+  }
+  
+  .btn-account-upgrade {
+    width: 40px;
+    height: 40px;
+    //font-family: 'montserratregular' sans-serif;
+    font-size: 20px;
+  }
+  
+  table {
+    padding-top: 10px;
+    margin-top: 20px;
+    border-top: 1px solid silver;
+  }
+}

@@ -7,7 +7,7 @@
   //border-radius: 4px;
   clear: fix;
   
-  #error__icon {
+  .error__icon {
     background-color: indianred;
     color: whitesmoke;
     position: absolute;
@@ -21,7 +21,7 @@
     text-shadow: 1px 1px 1px firebrick;
   }
   
-  #error__message {
+  .error__message {
     background-color: whitesmoke;
     float: right;
     width: 90%;
@@ -65,7 +65,7 @@
     }
     
     .terms--copy > strong {
-      font-size: responsive 12px 14px;
+      //font-size: responsive 12px 14px;
     }
   }
 }
@@ -106,11 +106,11 @@
   .error--flag {
     width: 100%;
     
-    #error__icon {
+    .error__icon {
       width: 15%;
     }
     
-    #error__message {
+    .error__message {
       width: 85%;
     }
   }

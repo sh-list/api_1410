@@ -16,27 +16,37 @@
       top: 0;
       height: 30px;
       padding: 0 10px;
+      
+      .bar__figure {
+        //background-color: tomato;
+        position: relative;
+        float: right;
+        top: 50%;
+        transform: translateY(-50%);
+        animation: show-value 4s ease-out;
+      }      
     }
-    
+        
     .key1 {
-      width: 70%;
+      //width: 70%;
       transition: width 4s;
       animation: key1 4s ease-out;
     }
     
     .key2 {
-      width: 40%;
+      //width: 40%;
       transition: width 4s;
       animation: key2 4s ease-out;
     }
     
+/*
     @keyframes key1 {
       0% {
         width: 0;
       }
       
       100% {
-        width: 70%;
+        //width: 70%;
       }
     }
     
@@ -46,10 +56,12 @@
       }
       
       100% {
-        width: 40%;
+        //width: 40%;
       }
     }
-    
+*/
+        
+/*
     .key1:before, .key2:before {
       color: whitesmoke;
       //content: '70%';
@@ -61,12 +73,14 @@
     }
     
     .key1:before {
-      content: '70%';
+      //content: '70%';
+      content: attr(data-line);
     }
     
     .key2:before {
       content: '400 / 1,000';
     }    
+*/
     
     @keyframes show-value {
       0% {

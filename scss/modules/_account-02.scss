@@ -1,10 +1,11 @@
 p > strong {
   //color: $highlight-color;
   margin: 0 1px;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   font-family: 'montserratregular' sans-serif;
-  font-size: 16px;
+  //font-size: 16px;
   font-weight: normal;
+  text-transform: uppercase;
 }
 
 .api__account__wrapper {
